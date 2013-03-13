@@ -5,11 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace VocApp.Model {
-    class Word {
+    public class Word {
 
+        public string Wordstring {
+            get;
+            private set;
+        }
+
+        public int Rating {
+            get; 
+            set;
+        }
+
+        public Word(string Wordstring) {
+            this.Wordstring = Wordstring;
+        }
 
         public string ToString() {
-            return "";
+            return Wordstring;
         }
     }
 }

@@ -18,6 +18,11 @@ namespace VocApp.Model {
             foreach (char c in readstring) {
                 if (NotSpecialCharacter(c)) {
                     stringbuilder.Append(c);
+                } else {
+                    string newstring = stringbuilder.ToString();
+                    if (newstring.Length > 0) {
+                        result.Add(new Word(newstring));
+                    }
                 }
             }
             return result;
