@@ -1,0 +1,5 @@
+C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp.Model\bin\Debug\VocApp.Model.dll
+C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp.Model\bin\Debug\VocApp.Model.pdb
+C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp.Model\obj\Debug\VocApp.Model.csprojResolveAssemblyReference.cache
+C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp.Model\obj\Debug\VocApp.Model.dll
+C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp.Model\obj\Debug\VocApp.Model.pdb

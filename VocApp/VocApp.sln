@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VocApp", "VocApp\VocApp.csproj", "{BFC691E5-B599-4F06-936C-1FB3BEBFFAF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VocApp.Model", "VocApp.Model\VocApp.Model.csproj", "{3A1B9BC8-A9E2-4E64-9EB9-079F125B4B57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{BFC691E5-B599-4F06-936C-1FB3BEBFFAF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFC691E5-B599-4F06-936C-1FB3BEBFFAF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFC691E5-B599-4F06-936C-1FB3BEBFFAF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A1B9BC8-A9E2-4E64-9EB9-079F125B4B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A1B9BC8-A9E2-4E64-9EB9-079F125B4B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A1B9BC8-A9E2-4E64-9EB9-079F125B4B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A1B9BC8-A9E2-4E64-9EB9-079F125B4B57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
