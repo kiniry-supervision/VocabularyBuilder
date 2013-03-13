@@ -1,8 +1,21 @@
 ﻿<Application x:Class="VocApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="View/MainWindow.xaml">
+             StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="CalcButton" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse Fill="LightBlue"/>
+                            <ContentPresenter HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Control.Margin" Value="10"/>
+        </Style>
     </Application.Resources>
 </Application>

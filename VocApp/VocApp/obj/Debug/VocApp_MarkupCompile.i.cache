@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\View\App.xaml
-1-1711142684
+3-766252636
 
-9-1257161834
-12-1401562060
-View\MainWindow.xaml;
+121590908469
+16797015152
+View\ResourceDictionary.xaml;View\MainWindow.xaml;View\MultipleQuizWindow.xaml;
 
-False
+True
 

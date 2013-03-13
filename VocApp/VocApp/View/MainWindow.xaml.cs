@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VocApp.View;
 
 namespace VocabularyGUI {
     /// <summary>
@@ -20,6 +21,10 @@ namespace VocabularyGUI {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e) {
+
         }
 
     }

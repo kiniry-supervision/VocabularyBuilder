@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VocApp.Model {
     class Word {
-        Word[] wrong_ans = new Word[4];
+
 
         public string ToString() {
             return "";

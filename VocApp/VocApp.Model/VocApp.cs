@@ -6,5 +6,6 @@ using System.Threading.Tasks;
 
 namespace VocApp.Model {
     class VocApp {
+
     }
 }
