@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VocabularyGUI {
+namespace VocApp.Model {
     class Word {
         Word[] wrong_ans = new Word[4];
 

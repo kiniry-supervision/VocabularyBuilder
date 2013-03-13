@@ -14,3 +14,13 @@ C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\View\
 C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\bin\Debug\VocApp.exe.config
 C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\VocApp.exe
 C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\VocApp.pdb
+C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\bin\Debug\VocApp.exe
+C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\bin\Debug\VocApp.pdb
+C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\VocApp.csprojResolveAssemblyReference.cache
+C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\View\MainWindow.baml
+C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\View\MainWindow.g.cs
+C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\View\App.g.cs
+C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\VocApp_MarkupCompile.cache
+C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\VocApp.g.resources
+C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\VocApp.Properties.Resources.resources
+C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\VocApp.csproj.GenerateResource.Cache

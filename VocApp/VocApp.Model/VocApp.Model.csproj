@@ -40,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HtmlReader.cs" />
+    <Compile Include="Multiple_Quiz.cs" />
     <Compile Include="PdfReader.cs" />
+    <Compile Include="Quiz.cs" />
     <Compile Include="Reader.cs" />
     <Compile Include="VocApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
