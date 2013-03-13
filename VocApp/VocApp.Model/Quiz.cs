@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace VocabularyGUI {
-    class Word {
-        Word[] wrong_ans = new Word[4];
+    abstract class Quiz {
+        VocApp core;
 
-        public string ToString() {
-            return "";
+        public Quiz(VocApp core) {
+            this.core = core;
         }
+
     }
 }

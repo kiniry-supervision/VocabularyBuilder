@@ -11,3 +11,6 @@ C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\VocAp
 C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\View\MainWindow.baml
 C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\View\MainWindow.g.cs
 C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\View\App.g.cs
+C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\bin\Debug\VocApp.exe.config
+C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\VocApp.exe
+C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\VocApp.pdb
