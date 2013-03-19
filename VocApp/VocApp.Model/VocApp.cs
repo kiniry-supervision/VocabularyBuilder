@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Net;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.Xml;
+using System.Runtime.Serialization.Json;
 
 namespace VocApp.Model {
     public class VocApp {
@@ -47,15 +51,15 @@ namespace VocApp.Model {
 
         public string Translate(string txtToTranslate) {
             string uri = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text=" + 
-                System.Web.HttpUtility.UrlEncode(txtToTranslate) + "&from=" + FromLanguage + "&to=+" + ToLanguage;
-            System.Net.WebRequest translationWebRequest = System.Net.WebRequest.Create(uri);
+                HttpUtility.UrlEncode(txtToTranslate) + "&from=" + FromLanguage + "&to=+" + ToLanguage;
+            WebRequest translationWebRequest = System.Net.WebRequest.Create(uri);
             translationWebRequest.Headers.Add("Authorization", getAccessToken());
-            System.Net.WebResponse response = null;
+            WebResponse response = null;
             response = translationWebRequest.GetResponse();
-            System.IO.Stream stream = response.GetResponseStream();
-            System.Text.Encoding encode = System.Text.Encoding.GetEncoding("utf-8");
-            System.IO.StreamReader translatedStream = new System.IO.StreamReader(stream, encode);
-            System.Xml.XmlDocument xTranslation = new System.Xml.XmlDocument();
+            Stream stream = response.GetResponseStream();
+            Encoding encode = System.Text.Encoding.GetEncoding("utf-8");
+            StreamReader translatedStream = new System.IO.StreamReader(stream, encode);
+            XmlDocument xTranslation = new System.Xml.XmlDocument();
             xTranslation.LoadXml(translatedStream.ReadToEnd());
             return xTranslation.InnerText;
         }
@@ -65,17 +69,17 @@ namespace VocApp.Model {
             string clientSecret = "Ons8Cd47hFxMfwGGvlOtUPsp3WJcLA5agDAyTc7KMEg=";
             String strTranslatorAccessURI = "https://datamarket.accesscontrol.windows.net/v2/OAuth2-13";
             String strRequestDetails = string.Format("grant_type=client_credentials&client_id={0}&client_secret={1}&scope=http://api.microsofttranslator.com", HttpUtility.UrlEncode(clientID), HttpUtility.UrlEncode(clientSecret));
-            System.Net.WebRequest webRequest = System.Net.WebRequest.Create(strTranslatorAccessURI);
+            WebRequest webRequest = WebRequest.Create(strTranslatorAccessURI);
             
             webRequest.ContentType = "application/x-www-form-urlencoded";
             webRequest.Method = "POST";
-            byte[] bytes = System.Text.Encoding.ASCII.GetBytes(strRequestDetails);
+            byte[] bytes = Encoding.ASCII.GetBytes(strRequestDetails);
             webRequest.ContentLength = bytes.Length;
             using (System.IO.Stream outputStream = webRequest.GetRequestStream()) {
                 outputStream.Write(bytes, 0, bytes.Length);
             }
-            System.Net.WebResponse webResponse = webRequest.GetResponse();
-            System.Runtime.Serialization.Json.DataContractJsonSerializer serializer = new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(AdmAccessToken));
+            WebResponse webResponse = webRequest.GetResponse();
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(AdmAccessToken));
 
             //Get deserialized object from JSON stream 
 

@@ -21,6 +21,7 @@ namespace VocApp.Model {
                 } else {
                     string newstring = stringbuilder.ToString();
                     if (newstring.Length > 0) {
+                        newstring = newstring.ToLowerInvariant();
                         result.Add(new Word(newstring));
                     }
                 }
