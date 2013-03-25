@@ -21,8 +21,15 @@ namespace VocApp.Model {
             this.Wordstring = Wordstring;
         }
 
-        public string ToString() {
-            return Wordstring;
+        public override bool Equals(object obj) {
+            if (obj is Word) {
+                return Wordstring == (obj as Word).Wordstring;
+            }
+            return false;
+        }
+
+        public override int GetHashCode() {
+            return Wordstring.GetHashCode();
         }
     }
 }

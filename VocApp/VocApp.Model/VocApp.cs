@@ -33,18 +33,23 @@ namespace VocApp.Model {
             }
         }
 
-        private ISet<Word> Wordlist;
+        private ISet<Word> Wordset;
         private PdfReader pdfreader;
         private HtmlReader htmlreader;
 
         public VocApp() {
-            Wordlist = new HashSet<Word>();
+            Wordset = new HashSet<Word>();
             pdfreader = new PdfReader();
             htmlreader = new HtmlReader();
         }
 
+        public void ReadPdf(string filename) {
+            ISet<Word> result = pdfreader.Read(filename);
+            Wordset.UnionWith(result);
+        }
+
         public Word GetRandomWord() {
-            Word[] wordarray = Wordlist.ToArray<Word>();
+            Word[] wordarray = Wordset.ToArray<Word>();
             Random r = new Random();
             return wordarray[r.Next(wordarray.Length)];
         }

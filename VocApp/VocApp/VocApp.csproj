@@ -120,6 +120,12 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VocApp.Model\VocApp.Model.csproj">
+      <Project>{3a1b9bc8-a9e2-4e64-9eb9-079f125b4b57}</Project>
+      <Name>VocApp.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

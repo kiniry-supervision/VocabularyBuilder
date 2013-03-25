@@ -6,3 +6,5 @@ C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp.Model\obj\Debug
 C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp.Model\obj\Debug\VocApp.Model.csprojResolveAssemblyReference.cache
 C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp.Model\obj\Debug\VocApp.Model.dll
 C:\Users\Morten\Documents\GitHub\VocabularyBuilder\VocApp\VocApp.Model\obj\Debug\VocApp.Model.pdb
+C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp.Model\bin\Debug\VocApp.Model.dll.config
+C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp.Model\bin\Debug\itextsharp.dll
