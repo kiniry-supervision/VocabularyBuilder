@@ -16,7 +16,7 @@ namespace VocApp.Model {
             string readstring = GetString(source);
             StringBuilder stringbuilder = new StringBuilder(20);
             foreach (char c in readstring) {
-                if (!SpecialCharacter(c)) {
+                if (!IsSpecialCharacter(c)) {
                     stringbuilder.Append(c);
                 } else {
                     string newstring = stringbuilder.ToString();
@@ -30,7 +30,7 @@ namespace VocApp.Model {
             return result;
         }
 
-        private bool SpecialCharacter(char c) {
+        private bool IsSpecialCharacter(char c) {
             foreach (char sp in specialchars) {
                 if (sp == c) {
                     return true;
