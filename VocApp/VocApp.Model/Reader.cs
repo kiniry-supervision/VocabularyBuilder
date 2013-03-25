@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace VocApp.Model {
     public abstract class Reader {
 
-        private char[] specialcharacters = { '\n', ' ', '.', ',', '!', '?', '(', ')' };
+        private char[] specialchars = { '\n', ' ', '.', ',', '!', '?', '(', ')' };
 
         protected abstract string GetString(string name);
 
@@ -31,7 +31,7 @@ namespace VocApp.Model {
         }
 
         private bool SpecialCharacter(char c) {
-            foreach (char sp in specialcharacters) {
+            foreach (char sp in specialchars) {
                 if (sp == c) {
                     return true;
                 }
