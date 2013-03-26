@@ -14,17 +14,25 @@ namespace VocApp.Model {
         public ISet<Word> Read(string source) {
             ISet<Word> result = new HashSet<Word>();
             string readstring = GetString(source);
+            bool skiptonextspace = false;
             StringBuilder stringbuilder = new StringBuilder(20);
             foreach (char c in readstring) {
-                if (!IsSpecialCharacter(c)) {
-                    stringbuilder.Append(c);
-                } else {
-                    string newstring = stringbuilder.ToString();
-                    if (newstring.Length > 0) {
-                        newstring = newstring.ToLowerInvariant();
-                        result.Add(new Word(newstring));
+                if (!skiptonextspace) {
+                    if (char.IsLetter(c)) {
+                        stringbuilder.Append(c);
+                    } else if (IsSpecialCharacter(c)) {
+                        string newstring = stringbuilder.ToString();
+                        if (newstring.Length > 0) {
+                            newstring = newstring.ToLowerInvariant();
+                            result.Add(new Word(newstring));
+                            stringbuilder.Clear();
+                        }
+                    } else {
                         stringbuilder.Clear();
+                        skiptonextspace = true;
                     }
+                } else if (c == ' ') {
+                    skiptonextspace = false;
                 }
             }
             return result;

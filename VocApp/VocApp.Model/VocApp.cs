@@ -13,7 +13,7 @@ namespace VocApp.Model {
     public class VocApp {
 
 
-        private string fromLanguage = "da";
+        private string fromLanguage = "en";
         public string FromLanguage {
             get {
                 return fromLanguage;
@@ -23,7 +23,7 @@ namespace VocApp.Model {
             }
         }
 
-        private string toLanguage = "en";
+        private string toLanguage = "de";
         public string ToLanguage {
             get {
                 return toLanguage;
