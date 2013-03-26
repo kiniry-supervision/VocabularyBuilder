@@ -21,7 +21,7 @@
 
             </TabItem>
         </TabControl>
-            <Button Content="Start quiz"/>
+            <Button Content="Start quiz" Command="{Binding StartQuizCommand}"/>
         </StackPanel>
     </Grid>
 </Window>

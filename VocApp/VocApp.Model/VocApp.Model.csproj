@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="AdmAccessToken.cs" />
     <Compile Include="HtmlReader.cs" />
-    <Compile Include="Multiple_Quiz.cs" />
+    <Compile Include="MultipleQuiz.cs" />
     <Compile Include="PdfReader.cs" />
     <Compile Include="Quiz.cs" />
     <Compile Include="Reader.cs" />

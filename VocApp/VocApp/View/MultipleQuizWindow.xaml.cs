@@ -11,14 +11,26 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VocApp.Model;
+using VocApp.ViewModel;
 
 namespace VocApp.View {
     /// <summary>
     /// Interaction logic for MultipleQuizWindow.xaml
     /// </summary>
+
     public partial class MultipleQuizWindow : Window {
-        public MultipleQuizWindow() {
+
+        public MultipleQuizViewModel vm;
+
+        //public MultipleQuizWindow() {
+        //    InitializeComponent();
+        //}
+
+        public MultipleQuizWindow(MainViewModel mvm) {
             InitializeComponent();
+            vm = new MultipleQuizViewModel(mvm);
+            this.DataContext = vm;
         }
     }
 }

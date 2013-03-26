@@ -13,7 +13,7 @@ namespace VocApp.Model {
     public class VocApp {
 
 
-        private string fromLanguage = "en";
+        private string fromLanguage = "da";
         public string FromLanguage {
             get {
                 return fromLanguage;
@@ -23,7 +23,7 @@ namespace VocApp.Model {
             }
         }
 
-        private string toLanguage = "es";
+        private string toLanguage = "en";
         public string ToLanguage {
             get {
                 return toLanguage;
@@ -33,7 +33,7 @@ namespace VocApp.Model {
             }
         }
 
-        private ISet<Word> Wordset;
+        public ISet<Word> Wordset;
         private PdfReader pdfreader;
         private HtmlReader htmlreader;
 
@@ -48,10 +48,22 @@ namespace VocApp.Model {
             Wordset.UnionWith(result);
         }
 
+        public void AddHtml(string url) {
+            ISet<Word> result = htmlreader.Read(url);
+            Wordset.UnionWith(result);
+        }
+
         public Word GetRandomWord() {
             Word[] wordarray = Wordset.ToArray<Word>();
             Random r = new Random();
             return wordarray[r.Next(wordarray.Length)];
+        }
+
+
+        public Quiz GenerateQuiz() {
+            Word word = GetRandomWord();
+            MultipleQuiz quiz = new MultipleQuiz(this, word);
+            return quiz;
         }
 
         public string Translate(string txtToTranslate) {

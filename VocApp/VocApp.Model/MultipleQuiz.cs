@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VocApp.Model {
+    public class MultipleQuiz : Quiz {
+        public Word word {
+            get;
+            private set;
+        }
+        public string answer {
+            get;
+            private set;
+        }
+        public int ansIndex {
+            get;
+            private set;
+        }
+        string[] allAnswers = new string[5];
+        public string[] AllAnswers {
+            get {
+                return allAnswers;
+            }
+        }
+        int attempts;
+
+        // constructor
+        public MultipleQuiz(VocApp core, Word word)
+            : base(core) {
+            this.word = word;
+            this.answer = core.Translate(word.Wordstring);
+            Word ranWord = core.GetRandomWord();
+            List<Word> addedWords = new List<Word>();
+            for (int i = 0; i < 5; i++) {
+                while (addedWords.Contains(ranWord) || ranWord == word) {
+                    if (i > 0) {
+                        ranWord = core.GetRandomWord();
+                    }
+                }
+                allAnswers[i] = core.Translate(ranWord.Wordstring);
+                addedWords.Add(ranWord);
+            }
+
+            // place the answer in the list of words
+            Random index = new Random();
+            this.ansIndex = index.Next(0, 5);
+            allAnswers[ansIndex] = answer;
+        }
+
+        // returns the question presented in the gui
+        public String GetText() {
+            return "Which of the following 5 words is the correct translation for " + word + " ?";
+        }
+
+        public bool MatchAnswer(string selected) {
+            if (answer.ToString() == selected)
+                return true;
+            else
+                attempts++;
+            return false;
+        }
+
+
+    }
+}

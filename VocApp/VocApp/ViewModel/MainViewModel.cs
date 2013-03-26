@@ -10,7 +10,7 @@ using VocApp.Model;
 using GalaSoft.MvvmLight;
 
 namespace VocApp.ViewModel {
-    class MainViewModel : ViewModelBase {
+    public class MainViewModel : ViewModelBase {
 
         internal VocApp.Model.VocApp model;
 
@@ -21,28 +21,42 @@ namespace VocApp.ViewModel {
             }
             set {
                 pdfpath = value;
-                RaisePropertyChanged("Pdfpath");
+                RaisePropertyChanged("PdfPath");
             }
         }
 
-        public ICommand launchQuiz { get; private set; }
+        private string htmlpath = "";
+        public string HtmlPath {
+            get {
+                return htmlpath;
+            }
+            set {
+                htmlpath = value;
+                RaisePropertyChanged("HtmlPath");
+            }
+        }
+
+        public ICommand StartQuizCommand { get; private set; }
         public ICommand BrowsePdfCommand { get; private set; }
         public ICommand AddPdfCommand { get; private set; }
-        public ICommand ReadHtmlCommand { get; private set; }
+        public ICommand AddHtmlCommand { get; private set; }
 
         public MainViewModel() {
             model = new Model.VocApp();
 
-            launchQuiz = new RelayCommand(beginQuiz);
+            StartQuizCommand = new RelayCommand(StartQuiz, CanStartQuiz);
             BrowsePdfCommand = new RelayCommand(BrowsePdf);
             AddPdfCommand = new RelayCommand(AddPdf, CanAddPdf);
-            ReadHtmlCommand = new RelayCommand(ReadHtml);
+            AddHtmlCommand = new RelayCommand(AddHtml);
         }
 
-        public void beginQuiz() {
-            MultipleQuizWindow newWindow = new MultipleQuizWindow();
-            newWindow.Show(); //  Shows a window
-            newWindow.QuestionBox.Text = "Please translate the word Pomfrit ";
+        public void StartQuiz() {
+            MultipleQuizWindow newWindow = new MultipleQuizWindow(this);
+            newWindow.Show();
+        }
+
+        public bool CanStartQuiz() {
+            return model.Wordset.Count >= 5;
         }
 
         private void BrowsePdf() {
@@ -56,16 +70,21 @@ namespace VocApp.ViewModel {
         }
 
         public void AddPdf() {
-            model.ReadPdf(pdfpath);
+            model.ReadPdf(PdfPath);
             PdfPath = "";
         }
 
         public bool CanAddPdf() {
-            return pdfpath.Length > 0;
+            return PdfPath.Length > 0;
         }
 
-        public void ReadHtml() {
-
+        public void AddHtml() {
+            model.AddHtml(HtmlPath);
+            HtmlPath = "";
         }
+
+        //private bool CanAddHtml() {
+        //    return HtmlPath.Length > 0;
+        //}
     }
 }

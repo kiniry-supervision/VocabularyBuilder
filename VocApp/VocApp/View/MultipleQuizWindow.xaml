@@ -4,18 +4,18 @@
         Title="MultipleQuizWindow" Height="300" Width="300">
     <Grid>
         <Grid.RowDefinitions>
-        <RowDefinition Height="56*" />
-        <RowDefinition Height="43*" />
-        <RowDefinition Height="43*" />
-        <RowDefinition Height="43*" />
-        <RowDefinition Height="43*" />
-        <RowDefinition Height="42*" />
-            </Grid.RowDefinitions>
-        <Button Content="Button" Name="Answer1" HorizontalAlignment="Left" Margin="108,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="22"/>
-        <Button Content="Button" Name="Answer2" HorizontalAlignment="Left" Margin="108,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Height="22"/>
-        <Button Content="Button" Name="Answer3" HorizontalAlignment="Left" Margin="108,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="75" Height="22"/>
-        <Button Content="Button" Name="Answer4" HorizontalAlignment="Left" Margin="108,13,0,0" Grid.Row="4" VerticalAlignment="Top" Width="75" Height="22"/>
-        <Button Content="Button" Name="Answer5" HorizontalAlignment="Left" Margin="108,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="75" Height="22"/>
-        <TextBlock Name="QuestionBox" HorizontalAlignment="Left" Margin="32,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.48,-0.688" Height="36" Width="220"><Run Language="da-dk" Text=""/></TextBlock>
+            <RowDefinition Height="56*" />
+            <RowDefinition Height="43*" />
+            <RowDefinition Height="43*" />
+            <RowDefinition Height="43*" />
+            <RowDefinition Height="43*" />
+            <RowDefinition Height="42*" />
+        </Grid.RowDefinitions>
+        <Button Content="{Binding Ans1}" Name="Answer1" HorizontalAlignment="Left" Margin="108,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="22"/>
+        <Button Content="{Binding Ans2}" Name="Answer2" HorizontalAlignment="Left" Margin="108,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Height="22"/>
+        <Button Content="{Binding Ans3}" Name="Answer3" HorizontalAlignment="Left" Margin="108,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="75" Height="22"/>
+        <Button Content="{Binding Ans4}" Name="Answer4" HorizontalAlignment="Left" Margin="108,13,0,0" Grid.Row="4" VerticalAlignment="Top" Width="75" Height="22"/>
+        <Button Content="{Binding Ans5}" Name="Answer5" HorizontalAlignment="Left" Margin="108,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="75" Height="22"/>
+        <TextBlock Text="{Binding Text}" Name="QuestionBox" HorizontalAlignment="Left" Margin="32,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.48,-0.688" Height="36" Width="220"><Run Language="da-dk" Text=""/></TextBlock>
     </Grid>
 </Window>

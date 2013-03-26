@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace VocApp.Model {
-    abstract class Quiz {
+    public abstract class Quiz {
         VocApp core;
 
         public Quiz(VocApp core) {
