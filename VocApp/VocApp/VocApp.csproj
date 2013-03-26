@@ -65,9 +65,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\Converters\TabSizeConverter.cs" />
+    <Compile Include="View\ImportUserControl.xaml.cs">
+      <DependentUpon>ImportUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LinkWindow.xaml.cs">
+      <DependentUpon>LinkWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MultipleQuizWindow.xaml.cs">
       <DependentUpon>MultipleQuizWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\ImportUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LinkWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ResourceDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -125,6 +140,12 @@
       <Project>{3a1b9bc8-a9e2-4e64-9eb9-079f125b4b57}</Project>
       <Name>VocApp.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\pdficon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\htmlicon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

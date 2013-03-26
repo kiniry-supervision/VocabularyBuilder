@@ -1,0 +1,11 @@
+﻿<Window x:Class="VocApp.View.LinkWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LinkWindow">
+    <StackPanel>
+        <TextBox/>
+        <StackPanel>
+            
+        </StackPanel>
+    </StackPanel>
+</Window>

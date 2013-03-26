@@ -61,3 +61,7 @@ C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\View\
 C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\bin\Debug\VocApp.Model.dll
 C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\bin\Debug\itextsharp.dll
 C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\bin\Debug\VocApp.Model.pdb
+C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\View\LinkWindow.baml
+C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\View\LinkWindow.g.cs
+C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\View\ImportUserControl.baml
+C:\Users\Patrik\Documents\GitHub\VocabularyBuilder\VocApp\VocApp\obj\Debug\View\ImportUserControl.g.cs
