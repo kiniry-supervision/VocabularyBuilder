@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="VocApp.View.LanguageUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             >
+    <UserControl.Resources>
+        <sys:Double x:Key="flagwidth" >100</sys:Double>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" FontSize="20" FontWeight="Bold" VerticalAlignment="Center" Text="Your language: "/>
+        <ComboBox Grid.Row="0" Grid.Column="1" Text="Hey" SelectedIndex="0" SelectedItem="{Binding YourLanguage, Mode=OneWayToSource}">
+            <ComboBoxItem Tag="en">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Icons/english_flag.png" Width="{StaticResource flagwidth}"/>
+                    <TextBlock FontSize="30" Text="English" VerticalAlignment="Center"/>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem Tag="da">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Icons/danish_flag.png" Width="{StaticResource flagwidth}"/>
+                    <TextBlock FontSize="30" Text="Danish" VerticalAlignment="Center"/>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem Tag="de">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Icons/german_flag.png" Width="{StaticResource flagwidth}"/>
+                    <TextBlock FontSize="30" Text="German" VerticalAlignment="Center"/>
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
+        <Separator Grid.Row="1" Grid.ColumnSpan="2" Margin="0,5"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" FontSize="20" FontWeight="Bold" VerticalAlignment="Center" Text="Target language: "/>
+        <ComboBox Grid.Row="2" Grid.Column="1" Text="Hey" SelectedIndex="1" SelectedItem="{Binding TargetLanguage, Mode=OneWayToSource}">
+            <ComboBoxItem Tag="en">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Icons/english_flag.png" Width="{StaticResource flagwidth}"/>
+                    <TextBlock FontSize="30" Text="English" VerticalAlignment="Center"/>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem Tag="da">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Icons/danish_flag.png" Width="{StaticResource flagwidth}"/>
+                    <TextBlock FontSize="30" Text="Danish" VerticalAlignment="Center"/>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem Tag="de">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Icons/german_flag.png" Width="{StaticResource flagwidth}"/>
+                    <TextBlock FontSize="30" Text="German" VerticalAlignment="Center"/>
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</UserControl>

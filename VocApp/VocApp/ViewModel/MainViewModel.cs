@@ -8,6 +8,7 @@ using GalaSoft.MvvmLight.Command;
 using VocApp.View;
 using VocApp.Model;
 using GalaSoft.MvvmLight;
+using System.Windows.Controls;
 
 namespace VocApp.ViewModel {
     public class MainViewModel : ViewModelBase {
@@ -33,6 +34,19 @@ namespace VocApp.ViewModel {
             set {
                 htmlpath = value;
                 RaisePropertyChanged("HtmlPath");
+            }
+        }
+
+        public ComboBoxItem YourLanguage {
+            set {
+                model.YourLanguage = value.Tag as string;
+
+            }
+        }
+
+        public ComboBoxItem TargetLanguage {
+            set {
+                model.TargetLanguage = value.Tag as string;
             }
         }
 

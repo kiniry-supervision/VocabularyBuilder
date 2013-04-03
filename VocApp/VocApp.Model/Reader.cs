@@ -22,12 +22,12 @@ namespace VocApp.Model {
                         stringbuilder.Append(c);
                     } else if (IsSpecialCharacter(c)) {
                         string newstring = stringbuilder.ToString();
-                        if (newstring.Length > 0) {
+                        if (newstring.Length > 0) { // Only add if the new word isn't the empty string.
                             newstring = newstring.ToLowerInvariant();
                             result.Add(new Word(newstring));
                             stringbuilder.Clear();
                         }
-                    } else {
+                    } else { // The word contains a number or a symbol not listed in 'specialchars' and the program skips to the next word.
                         stringbuilder.Clear();
                         skiptonextspace = true;
                     }

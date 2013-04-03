@@ -69,6 +69,9 @@
     <Compile Include="View\ImportUserControl.xaml.cs">
       <DependentUpon>ImportUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\LanguageUserControl.xaml.cs">
+      <DependentUpon>LanguageUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LinkWindow.xaml.cs">
       <DependentUpon>LinkWindow.xaml</DependentUpon>
     </Compile>
@@ -76,6 +79,10 @@
       <DependentUpon>MultipleQuizWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="View\ImportUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LanguageUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,6 +153,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Icons\htmlicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\english_flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\danish_flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\german_flag.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

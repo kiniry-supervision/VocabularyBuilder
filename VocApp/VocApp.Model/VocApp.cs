@@ -13,23 +13,23 @@ namespace VocApp.Model {
     public class VocApp {
 
 
-        private string fromLanguage = "en";
-        public string FromLanguage {
+        private string yourLanguage = "en";
+        public string YourLanguage {
             get {
-                return fromLanguage;
+                return yourLanguage;
             }
             set {
-                fromLanguage = value;
+                yourLanguage = value;
             }
         }
 
-        private string toLanguage = "de";
-        public string ToLanguage {
+        private string targetLanguage = "de";
+        public string TargetLanguage {
             get {
-                return toLanguage;
+                return targetLanguage;
             }
             set {
-                toLanguage = "en";
+                targetLanguage = value;
             }
         }
 
@@ -68,7 +68,7 @@ namespace VocApp.Model {
 
         public string Translate(string txtToTranslate) {
             string uri = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text=" + 
-                HttpUtility.UrlEncode(txtToTranslate) + "&from=" + FromLanguage + "&to=+" + ToLanguage;
+                HttpUtility.UrlEncode(txtToTranslate) + "&from=" + YourLanguage + "&to=+" + TargetLanguage;
             WebRequest translationWebRequest = System.Net.WebRequest.Create(uri);
             translationWebRequest.Headers.Add("Authorization", getAccessToken());
             WebResponse response = null;

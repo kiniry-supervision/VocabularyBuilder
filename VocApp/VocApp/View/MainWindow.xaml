@@ -4,7 +4,7 @@
         xmlns:view="clr-namespace:VocApp.View"
         xmlns:viewmodel="clr-namespace:VocApp.ViewModel"
         Title="Vocabulary Builder v0.1a"
-        Width="500" Height="320">
+        Width="500" Height="320" ResizeMode="CanMinimize">
     <Window.Resources>
         <ResourceDictionary Source="ResourceDictionary.xaml"/>
     </Window.Resources>
@@ -19,7 +19,7 @@
                 <view:ImportUserControl VerticalAlignment="Top"/>
             </TabItem>
             <TabItem Header="Language">
-
+                <view:LanguageUserControl VerticalAlignment="Top"/>
             </TabItem>
             <TabItem Header="Settings">
 
