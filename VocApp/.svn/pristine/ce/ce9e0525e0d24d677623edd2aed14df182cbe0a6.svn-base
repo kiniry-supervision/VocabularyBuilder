@@ -1,0 +1,31 @@
+﻿<Window x:Class="VocabularyGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:view="clr-namespace:VocApp.View"
+        xmlns:viewmodel="clr-namespace:VocApp.ViewModel"
+        Title="Vocabulary Builder v0.1a"
+        Width="500" Height="320" ResizeMode="CanMinimize">
+    <Window.Resources>
+        <ResourceDictionary Source="ResourceDictionary.xaml"/>
+    </Window.Resources>
+    <Grid DataContext="{Binding Source={StaticResource vm}}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+                <TabControl Grid.Row="0">
+            <TabItem Header="Import">
+                <view:ImportUserControl VerticalAlignment="Top"/>
+            </TabItem>
+            <TabItem Header="Language">
+                <view:LanguageUserControl VerticalAlignment="Top"/>
+            </TabItem>
+            <TabItem Header="Settings">
+
+            </TabItem>
+        </TabControl>
+            <Button Grid.Row="1" Background="LightBlue" Content="Start quiz" Command="{Binding StartQuizCommand}"/>
+        </Grid>
+    </Grid>
+</Window>

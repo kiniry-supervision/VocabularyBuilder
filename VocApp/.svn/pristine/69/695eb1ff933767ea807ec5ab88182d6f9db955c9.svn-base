@@ -1,0 +1,26 @@
+﻿<Window x:Class="VocApp.View.PdfArchiveWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PdfArchiveWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ListBox ItemsSource="{Binding mvm.model.PdfItems}" SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}" Margin="10">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Filename}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Margin="10" Command="{Binding DeletePdfCommand}">Delete</Button>
+            <Button Margin="10" Grid.Column="1">Cancel</Button>
+        </Grid>
+    </Grid>
+</Window>

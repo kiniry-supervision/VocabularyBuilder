@@ -1,0 +1,111 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using GalaSoft.MvvmLight.Command;
+using VocApp.View;
+using VocApp.Model;
+using GalaSoft.MvvmLight;
+using System.Windows.Controls;
+
+namespace VocApp.ViewModel {
+    public class MainViewModel : ViewModelBase {
+
+        internal VocApp.Model.VocAppModel model;
+
+        private string pdfpath = "";
+        public string PdfPath {
+            get {
+                return pdfpath;
+            }
+            set {
+                pdfpath = value;
+                RaisePropertyChanged("PdfPath");
+            }
+        }
+
+        private string htmlpath = "";
+        public string HtmlPath {
+            get {
+                return htmlpath;
+            }
+            set {
+                htmlpath = value;
+                RaisePropertyChanged("HtmlPath");
+            }
+        }
+
+        public ComboBoxItem YourLanguage {
+            set {
+                model.YourLanguage = value.Tag as string;
+
+            }
+        }
+
+        public ComboBoxItem TargetLanguage {
+            set {
+                model.TargetLanguage = value.Tag as string;
+            }
+        }
+
+        public ICommand StartQuizCommand { get; private set; }
+        public ICommand BrowsePdfCommand { get; private set; }
+        public ICommand AddPdfCommand { get; private set; }
+        public ICommand AddHtmlCommand { get; private set; }
+
+        public MainViewModel() {
+            model = new Model.VocAppModel();
+
+            StartQuizCommand = new RelayCommand(StartQuiz, CanStartQuiz);
+            BrowsePdfCommand = new RelayCommand(BrowsePdf);
+            AddPdfCommand = new RelayCommand(AddPdf, CanAddPdf);
+            AddHtmlCommand = new RelayCommand(AddHtml);
+        }
+
+        public void StartQuiz() {
+            MultipleQuizWindow newWindow = new MultipleQuizWindow(this);
+            newWindow.Show();
+        }
+
+        public bool CanStartQuiz() {
+            int count = 0;
+            foreach (Item i in model.Items) {
+                count += i.words.Count;
+                if (count >= 5) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void BrowsePdf() {
+            Microsoft.Win32.OpenFileDialog filedialog = new Microsoft.Win32.OpenFileDialog();
+            filedialog.DefaultExt = ".pdf";
+            filedialog.Filter = "Portable Document Format documents (.pdf)|*.pdf";
+            Nullable<bool> result = filedialog.ShowDialog();
+            if (result == true) {
+                PdfPath = filedialog.FileName;
+            }
+        }
+
+        public void AddPdf() {
+            model.ReadPdf(PdfPath);
+            PdfPath = "";
+        }
+
+        public bool CanAddPdf() {
+            return PdfPath.Length > 0;
+        }
+
+        public void AddHtml() {
+            model.AddHtml(HtmlPath);
+            HtmlPath = "";
+        }
+
+        //private bool CanAddHtml() {
+        //    return HtmlPath.Length > 0;
+        //}
+    }
+}

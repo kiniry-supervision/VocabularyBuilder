@@ -1,0 +1,46 @@
+﻿<Window x:Class="VocApp.View.MQscoreWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MQscoreWindow" Height="720" Width="360" Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="56*" />
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="106,28,0,0" TextWrapping="Wrap" Text="Results" VerticalAlignment="Top" Height="62" Width="127" 
+                   FontSize="26" FontWeight="ExtraBold" TextAlignment="Center" Foreground="DarkGray" FontFamily="Lucida Calligraphy" />
+        <Image Source="Icons/correctPic.png" Margin="287,-45,10,372" Visibility="{Binding Vis}"/>
+        <Image Source="Icons/wrongPic.png" Margin="292,-91,10,321" Visibility="{Binding VisW}" RenderTransformOrigin="2.19,0.364"/>
+        <Image Source="Icons/correctPic.png" Margin="287,25,10,321" Visibility="{Binding Vis}"/>
+        <Image Source="Icons/wrongPic.png" Margin="292,-21,10,270" Visibility="{Binding VisW}" RenderTransformOrigin="2.19,0.364"/>
+        <Image Source="Icons/correctPic.png" Margin="287,85,10,262" Visibility="{Binding Vis}"/>
+        <Image Source="Icons/wrongPic.png" Margin="292,39,10,211" Visibility="{Binding VisW}" RenderTransformOrigin="2.19,0.364"/>
+        <Image Source="Icons/correctPic.png" Margin="287,145,10,202" Visibility="{Binding Vis}"/>
+        <Image Source="Icons/wrongPic.png" Margin="292,99,10,151" Visibility="{Binding VisW}" RenderTransformOrigin="2.19,0.364"/>
+        <Image Source="Icons/correctPic.png" Margin="287,205,10,133" Visibility="{Binding Vis}"/>
+        <Image Source="Icons/wrongPic.png" Margin="292,159,10,82" Visibility="{Binding VisW}" RenderTransformOrigin="2.19,0.364"/>
+        <Image Source="Icons/correctPic.png" Margin="287,265,10,82" Visibility="{Binding Vis}"/>
+        <Image Source="Icons/wrongPic.png" Margin="292,219,10,31" Visibility="{Binding VisW}" RenderTransformOrigin="2.19,0.364"/>
+        <Image Source="Icons/correctPic.png" Margin="287,325,10,31" Visibility="{Binding Vis}"/>
+        <Image Source="Icons/wrongPic.png" Margin="292,279,10,-20" Visibility="{Binding VisW}" RenderTransformOrigin="2.19,0.364"/>
+        <Image Source="Icons/correctPic.png" Margin="287,385,10,-15" Visibility="{Binding Vis}"/>
+        <Image Source="Icons/wrongPic.png" Margin="292,339,10,-66" Visibility="{Binding VisW}" RenderTransformOrigin="2.19,0.364"/>
+        <Image Source="Icons/correctPic.png" Margin="287,445,10,-61" Visibility="{Binding Vis}"/>
+        <Image Source="Icons/wrongPic.png" Margin="292,399,10,-112" Visibility="{Binding VisW}" RenderTransformOrigin="2.19,0.364"/>
+        <Image Source="Icons/correctPic.png" Margin="287,524,10,-80" Visibility="{Binding Vis}"/>
+        <Image Source="Icons/wrongPic.png" Margin="292,478,10,-139" Visibility="{Binding VisW}" RenderTransformOrigin="2.19,0.364"/>
+        <TextBlock HorizontalAlignment="Left" Margin="-30,69,0,0" TextWrapping="Wrap" Text="Quiz" VerticalAlignment="Top" Height="62" Width="127" 
+        	FontSize="12" FontWeight="Bold" TextAlignment="Center" Foreground="Gray" FontFamily="Lucida Calligraphy" />
+        <TextBlock HorizontalAlignment="Left" Margin="38,69,0,0" TextWrapping="Wrap" Text="Word" VerticalAlignment="Top" Height="62" Width="127" 
+        	FontSize="12" FontWeight="Bold" TextAlignment="Center" Foreground="Gray" FontFamily="Lucida Calligraphy" />
+        <TextBlock HorizontalAlignment="Left" Margin="123,69,0,0" TextWrapping="Wrap" Text="Word Level" VerticalAlignment="Top" Height="62" Width="127" 
+        	FontSize="12" FontWeight="Bold" TextAlignment="Center" Foreground="Gray" FontFamily="Lucida Calligraphy" />
+        <TextBlock HorizontalAlignment="Left" Margin="233,69,-18,0" TextWrapping="Wrap" Text="First Attempt" VerticalAlignment="Top" Height="62" Width="127" 
+        	FontSize="12" FontWeight="Bold" TextAlignment="Center" Foreground="Gray" FontFamily="Lucida Calligraphy" />
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Offset="0.4" Color="White"/>
+                <GradientStop Offset="1" Color="LightSteelBlue"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+    </Grid>
+</Window>

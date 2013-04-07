@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VocApp.ViewModel {
+    public class PdfArchiveViewModel {
+
+        MainViewModel mvm;
+
+        public PdfArchiveViewModel(MainViewModel mvm) {
+            this.mvm = mvm;
+        }
+    }
+}
